@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavBar, Nav, Container, Navbar } from 'react-bootstrap';
+import { NavBar , Nav, Container, Navbar } from 'react-bootstrap';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 import { LinkContainer } from 'react-router-bootstrap';
