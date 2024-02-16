@@ -14,11 +14,11 @@ connectDB();
 
 const app = express();
 
-// app.use(cors({
-//   origin: ["https://mern-ecommerce-1whq.vercel.app"],
-//   methods: ["GET", "POST", "PUT", "DELETE"],
-//   credentials: true
-// }));
+app.use(cors({
+  origin: ["https://mern-e-commerce-beta.vercel.app/"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 //Body parser middleware
 app.use(express.json());
