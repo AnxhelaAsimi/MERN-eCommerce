@@ -16,7 +16,7 @@ const ProductListScreen = () => {
     pageNumber,
   });
 
-  const [deleteProduct, { isLoading: loadingDelete }] =
+  const [deleteProduct] =
   useDeleteProductMutation();
 
   const deleteHandler = async (id) => {

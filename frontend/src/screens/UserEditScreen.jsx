@@ -1,15 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Form, Button } from 'react-bootstrap';
-import Message from '../components/Message';
-import Loader from '../components/Loader';
-import FormContainer from '../components/FormContainer';
+import { Button, Form } from 'react-bootstrap';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { useParams } from 'react-router-dom';
-import {
-  useGetUserDetailsQuery,
-  useUpdateUserMutation,
-} from '../slices/usersApiSlice';
+
+import FormContainer from '../components/FormContainer';
+import Loader from '../components/Loader';
+import Message from '../components/Message';
+import { useGetUserDetailsQuery, useUpdateUserMutation } from '../slices/usersApiSlice';
 
 const UserEditScreen = () => {
   const { id: userId } = useParams();
@@ -24,7 +21,7 @@ const UserEditScreen = () => {
     refetch,
   } = useGetUserDetailsQuery(userId);
 
-  const [updateUser, { isLoading: loadingUpdate }] = useUpdateUserMutation();
+  const [updateUser] = useUpdateUserMutation();
 
   const navigate = useNavigate();
 
